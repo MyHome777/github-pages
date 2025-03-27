@@ -1,0 +1,96 @@
+.margen {
+    padding: 0.01%;
+}
+
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    color: #333;  
+    line-height: 1.6;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+
+header {  
+   background-color: #6f42c1;
+    color: rgb(15, 12, 12);  
+    padding: 10px 0;  
+    text-align: center;  
+    
+}  
+
+.navegador {
+    margin-right: 5%;
+   margin-left: 5%;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 20px;  
+    padding: 20px;  
+    background: rgb(8, 8, 8);  
+    opacity: 50%;
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+
+
+}
+
+nav ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+nav ul li {  
+    display: inline;  
+    margin: 0 15px;  
+}  
+
+nav ul li a {  
+    color: white;  
+    text-decoration: none;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+section {  
+    margin-bottom: 20px;  
+    padding: 20px;  
+    background: white;  
+    border-radius: 5px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 10px 0;  
+    background: #6f42c1;  
+    color: white;  
+}  
+
+.container {  
+    position: relative;  
+    text-align: center;  
+    color: rgb(43, 27, 27) ; /* Cambia el color si es necesario */  
+    background-color: #222020;
+    opacity: 80%;
+    border-radius: 10px;
+}  
+
+.background-image {  
+    width: 100%;  
+    height: auto; /* Ajusta según tus necesidades */  
+}  
+
+.overlay-text {  
+    position: absolute;  
+
+    top: 40%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    font-size: 2.5em; /* Ajusta el tamaño si es necesario */  
+    color: white; /* Cambia a un color que contraste con el fondo */  
+  
+    padding: 10px; /* Agrega espacio alrededor del texto */  
+}  
