@@ -1,38 +1,36 @@
 async function obtenerLetra(artista, cancion) {  
     try {  
-        key = 'GET /ws/1.1/track.get?';   // Reemplaza con tu clave de API Musixmatch  
-        const respuesta = await fetch(`https://api.musixmatch.com/ws/1.1/track.search?q_track=${encodeURIComponent(cancion)}&q_artist=${encodeURIComponent(artista)}&f_has_lyrics=1&apikey=${key}`);  
-
-        if (!respuesta.ok) {  
-            console.error('Error en la respuesta de la API:', respuesta.status, respuesta.statusText);  
-            throw new Error('Error en la respuesta de la API');  
-        }  
-
+        // Obtener letra desde la API de letras  
+        const respuesta = await fetch(`https://api.lyrics.ovh/v1/${artista}/${cancion}`);  
         const data = await respuesta.json();  
-        console.log('Datos recibidos:', data); // Verifica lo que devuelve la API  
 
-        if (data.message.body.track_list.length > 0) {  
-            const trackId = data.message.body.track_list[0].track.track_id;  
-            const letraResponse = await fetch(`https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${trackId}&apikey=${key}`);  
-            
-            if (!letraResponse.ok) {  
-                console.error('Error al obtener la letra:', letraResponse.status, letraResponse.statusText);  
-                throw new Error('Error al obtener la letra');  
-            }  
-
-            const letraData = await letraResponse.json();  
-            const letra = letraData.message.body.lyrics.lyrics_body;  
-            document.getElementById('letra').innerText = letra;  
+        if (data.lyrics) {  
+            // Mostrar letra  
+            document.getElementById('letra').innerText = data.lyrics;  
         } else {  
             document.getElementById('letra').innerText = 'Letra no encontrada.';  
         }  
+
+        // Buscar video en YouTube  
+         key = 'AlzaSyD4svuUO1QZ_SD3KCz1WdYHmVfiDSL40Z4';  
+        const youtubeResponse = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(artista + ' ' + cancion)}&key=${key}`);  
+        const youtubeData = await youtubeResponse.json();  
+
+        if (youtubeData.items.length > 0 && youtubeData.items[0].id.videoId) {  
+            const videoId = youtubeData.items[0].id.videoId;  
+            document.getElementById('video').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;  
+        } else {  
+            document.getElementById('video').innerText = 'Video no encontrado.';  
+        }  
+
     } catch (error) {  
-        console.error('Error al obtener la letra:', error.message);  
+        console.error('Error al obtener la letra o el video:', error);  
         document.getElementById('letra').innerText = 'Ocurrió un error al buscar la letra.';  
+        document.getElementById('video').innerText = 'Ocurrió un error al buscar el video.';  
     }  
 }  
 
-// Manejar el evento de enviar el formulario  
+// Manejar el evento en el formulario  
 document.getElementById('buscador').addEventListener('submit', function (e) {  
     e.preventDefault();  
     const artista = document.getElementById('artista').value;  
