@@ -12,7 +12,7 @@ async function obtenerLetra(artista, cancion) {
         }  
 
         // Buscar video en YouTube  
-         key = 'AlzaSyD4svuUO1QZ_SD3KCz1WdYHmVfiDSL40Z4';  
+        const key = 'AlzaSyD4svuUO1QZ_SD3KCz1WdYHmVfiDSL40Z4';  
         const youtubeResponse = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(artista + ' ' + cancion)}&key=${key}`);  
         const youtubeData = await youtubeResponse.json();  
 
