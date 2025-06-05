@@ -1,9 +1,10 @@
 .cpm {
-display:grid;
+width: 100%;
  margin-left: 0.5%;
  margin-right: 0.5%;
  margin-top: 0.5%;
  margin-bottom: 0.5%;
+ 
 
 }
 
@@ -68,12 +69,14 @@ display:grid;
     
     text-align: left;
     max-width: 45%;
+    
 }
 .CVYF2 {
     
     margin-left: 52%;
-    margin-top: -27.5%;
-    max-width: 45%;
+    margin-top: -28%;
+    text-align: center;
+    
 }
 .pfont {
     color:azure;
@@ -119,6 +122,9 @@ display:grid;
 
 .CF {
     background-color: rgb(27, 27, 27);
+    padding: 0.01%;
+    
+
 }
 .br1 {
     border-radius: 20px;
@@ -161,8 +167,8 @@ display:grid;
 }
     
 .audio-player {
+    padding: 1%;
     background-color: #4b4949;
-    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgb(253, 253, 253);
   }
@@ -176,4 +182,3 @@ display:grid;
   .audio-player audio {
     width: 100%;
   }
-
