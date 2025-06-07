@@ -8,6 +8,84 @@ width: 100%;
 
 }
 
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+  margin-top: -6%;
+  
+  
+}
+
+
+ 
+
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+  
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+  
+}
+
+.button:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+  
+}
+
+.button:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+  
+}
+
+.button:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+  
+}
+
+
+nav ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+nav ul li {  
+    display: inline;  
+    margin: 0 15px;  
+}  
+
+nav ul li a {  
+    color: rgb(12, 12, 12);  
+    text-decoration: none;  
+}  
+
+
+
+
 .cp {
     margin-left:-2%;
     margin-right: 1%;
@@ -18,9 +96,10 @@ width: 100%;
 }
 
 .cw {
-    
-   
-    text-align: center;
+    margin-left: 20%;
+    margin-top: -3%;
+    margin-bottom: 1%;
+ 
 }
 .ctw {
     
@@ -48,7 +127,8 @@ width: 100%;
     margin-right: 20%;
 }
 .cttw11 {
-    margin-top: -12.3%;
+    margin-top: -20%;
+    margin-bottom: 1%;
     max-width: 15%;
     background-color: rgb(129, 123, 129);
     opacity: 0.8;
@@ -171,12 +251,14 @@ width: 100%;
     background-color: #4b4949;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgb(253, 253, 253);
+    
   }
   
   .audio-player h3 {
     color: #f7f2f2;
     font-size: 18px;
     margin-bottom: 10px;
+    
   }
   
   .audio-player audio {
