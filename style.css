@@ -1,10 +1,24 @@
 .margen {
     padding: 0.01%;
+    background: var(--systemBackground);
+}
+
+.STFDB {
+    font-family: sans-serif;
+    background-color: #dadcdf;
+     font-weight: bold;
+    border-radius: 9px;
+    opacity: 0.6;
+    font-size: large;
+    color: #000000;  
+    line-height: 1.2;  
+    margin: 1%;  
+    padding: 2%;  
 }
 
 body {  
     font-family: Arial, sans-serif;  
-    background-color: #f4f4f4;  
+    background: var(--systemBackground);
     color: #333;  
     line-height: 1.6;  
     margin: 0;  
@@ -21,8 +35,8 @@ header {
 }  
 
 .navegador {
-    margin-right: 3%;
-   margin-left: 3%;
+    margin-right: 5%;
+   margin-left: 5%;
     text-align: center;
     font-size: large;
     margin-bottom: 20px;  
@@ -57,7 +71,7 @@ main {
 section {  
     margin-bottom: 20px;  
     padding: 20px;  
-    background: white;  
+  
     border-radius: 5px;  
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
 }  
@@ -94,3 +108,53 @@ footer {
   
     padding: 10px; /* Agrega espacio alrededor del texto */  
 }  
+
+.CDB {
+    background-color: #ccc;
+    opacity: 0.9;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+/* Estilo general para los inputs */
+input[type="text"] {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 8px rgba(0, 102, 255, 0.5);
+  outline: none;
+}
+
+/* Estilo para el botón */
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0052cc;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
