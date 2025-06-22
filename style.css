@@ -5,7 +5,12 @@
 
 .EDITIMG {
   border-radius: 12px;
+  width: 250px; /* Cambia este valor por la anchura deseada */
+  height: 200px; /* Cambia este valor por la altura deseada */
+  object-fit: cover; /* Opcional: mantiene la proporción y recorta si es necesario */
 }
+
+
 
 .STFDB {
     font-family: sans-serif;
