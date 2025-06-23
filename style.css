@@ -3,19 +3,47 @@
     background: var(--systemBackground);
 }
 
+.COLTEXT {
+  /*color: rgb(197, 186, 228);*/
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px; /* ajusta al tamaño que desees */
+  color: #ffb14b; /* color color profesional y elegante (azul oscuro) */
+  font-weight: 600; /* peso de fuente semi-negrita para dar impacto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* sombra suave para profundidad */
+  letter-spacing: 1px; /* espacio entre letras para mayor elegancia */
+  line-height: 1.4; /* altura de línea para mejor lectura */
+  
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --systemBackground: #222; /* ejemplo de color oscuro */
+  }
+}
 .EDITIMG {
   border-radius: 12px;
   width: 250px; /* Cambia este valor por la anchura deseada */
   height: 200px; /* Cambia este valor por la altura deseada */
   object-fit: cover; /* Opcional: mantiene la proporción y recorta si es necesario */
 }
+.EDITvid {
+  margin-left: 1%;
+  border-radius: 12px;
+  width: 350px; /* Cambia este valor por la anchura deseada */
+  height: 200px; /* Cambia este valor por la altura deseada */
+  object-fit: cover; /* Opcional: mantiene la proporción y recorta si es necesario */
+}
+
+
+
+
+
 
 
 
 .STFDB {
     font-family: sans-serif;
-    background-color: #dadcdf;
-     font-weight: bold;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    font-weight: bold;
     border-radius: 9px;
     opacity: 0.6;
     font-size: large;
@@ -28,7 +56,7 @@
 body {  
     font-family: Arial, sans-serif;  
     background: var(--systemBackground);
-    color: #333;  
+    color: #d8d1d1;  
     line-height: 1.6;  
     margin: 0;  
     padding: 0;  
@@ -119,7 +147,7 @@ footer {
 }  
 
 .CDB {
-    background-color: #ccc;
+    background-color: #444444;
     opacity: 0.9;
     border-radius: 8px;
     text-align: center;
@@ -128,21 +156,19 @@ footer {
 
 
 
-
-
 /* Estilo general para los inputs */
 input[type="text"] {
   padding: 10px 15px;
   margin: 10px 5px;
-  border: 2px solid #ccc;
+  border: 2px solid #f0b906;
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input[type="text"]:focus {
-  border-color: #0066ff;
-  box-shadow: 0 0 8px rgba(0, 102, 255, 0.5);
+  border-color: #ffd900;
+  box-shadow: 0 0 25px rgba(255, 187, 0, 0.5);
   outline: none;
 }
 
@@ -150,7 +176,7 @@ input[type="text"]:focus {
 button {
   padding: 10px 20px;
   margin: 10px 5px;
-  background-color: #0066ff;
+  background-color: #ffa600;
   color: white;
   border: none;
   border-radius: 8px;
@@ -160,7 +186,7 @@ button {
 }
 
 button:hover {
-  background-color: #0052cc;
+  background-color: #ffd904;
   transform: scale(1.05);
 }
 
