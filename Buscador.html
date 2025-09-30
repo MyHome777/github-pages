@@ -3,54 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Letras Cristianas</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="margen" >
-
+<body class="margen">
+    <!-- Header con navegación -->
+    <header class="header">
+        <div class="container-header">
+            <div class="logo-menu">
+                <div class="logo">
+                    <span>🎵</span>
+                    <h1>Letras Cristianas</h1>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="nav-computadora">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="Letras.html" class="nav-link">Letras</a></li>
+                    <li><a href="Buscador.html" class="nav-link">Buscar</a></li>
+                    <li><a href="#" class="nav-link" id="favoritos-btn">Favoritos</a></li>
+                    <li><a href="#" class="nav-link" id="historial-btn">Historial</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Menú desplegable para móvil -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="Letras.html" class="nav-link">Letras</a></li>
+                <li><a href="Buscador.html" class="nav-link">Buscar</a></li>
+                <li><a href="#" class="nav-link" id="favoritos-btn-mobile">Favoritos</a></li>
+                <li><a href="#" class="nav-link" id="historial-btn-mobile">Historial</a></li>
+            </ul>
+        </nav>
+    </header>
      
-    
-    <br>
-    <div class="navegador">
-        <nav>  
-            <ul>  
-                 <li><a href="index.html">Anuncios</a></li>  
-                <li><a href="Letras.html">Letras</a></li>  
-                <li><a href="Buscador.html">Buscar</a></li>  
-            </ul>  
-          </nav>  
+    <main class="main">
+        <section class="buscador-seccion">
+            <div class="buscador-card">
+                <h2 class="titulo-principal">Buscar Letra</h2>
+                <form id="buscador" class="formulario-busqueda">
+                    <div class="campos-busqueda">
+                        <input type="text" id="artista" placeholder="Nombre del artista" required class="input-busqueda">
+                        <input type="text" id="cancion" placeholder="Título de la canción" required class="input-busqueda">
+                    </div>
+                    <button type="submit" class="btn-buscar">Buscar Letra</button>
+                </form>
+
+                <!-- Botón para descargar letra -->
+                <div class="funcionalidades">
+                    <button id="descargarLetra" class="btn-funcion">Descargar Letra</button>
+                    <button id="agregarFavorito" class="btn-funcion" style="display: none;">Agregar a Favoritos</button>
+                </div>
+
+                <div id="letra" class="letra-card"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Favoritos -->
+    <div id="favoritos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Favoritos</h3>
+            <div id="favoritos" class="favoritos-container"></div>
+        </div>
     </div>
-     
+
+    <!-- Modal de Historial -->
+    <div id="historial-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Historial de Búsquedas</h3>
+            <div id="historial" class="historial-container"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Letras Cristianas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
     
-
-    <section id="bienvenida">
-        <form id="buscador">  
-         <div  class="CDB"> <br>
-            <input type="text" id="artista" placeholder="Nombre del artista" required>  
-            <input type="text" id="cancion" placeholder="Título de la canción" required>  <br>
-            <button type="submit">Buscar Letra</button> 
-             <br>
-         </div>
-         <br>
-        </form>  
-    
-        <div id="letra" class="STFDB"></div> 
-         
-    </section>
-
-
- 
- <main>  
-    <section id="CDB">
-    
-    </section>  
-
- </main> 
-
-
-<footer>  
-    <p>&copy; 2025 Iglesia Pentecostal Unida Internacional. Todos los derechos reservados.</p>  
-</footer>  
-<script src="fun.js"></script>  
+    <script src="fun.js"></script>
 </body>
 </html>
