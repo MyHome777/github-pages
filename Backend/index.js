@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const ytdl = require('ytdl-core');
+const ytdl = require('@distube/ytdl-core');
 const app = express();
 
 app.use(cors({ origin: '*' }));
@@ -46,3 +46,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor corriendo en puerto ${port}`);
 });
+
